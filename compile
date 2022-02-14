@@ -1,0 +1,2 @@
+protoc appth.proto --js\_out=import\_style=commonjs,binary:./../public/appth/src/proto/\
+ --grpc-web\_out=import\_style=commonjs,mode=grpcwebtext:./../public/appth/src/proto/ --go-grpc\_out=. --go\_out=.

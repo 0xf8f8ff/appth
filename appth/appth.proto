@@ -1,0 +1,25 @@
+syntax = "proto3";
+package main;
+option go_package=".;appth";
+
+message PingRequest {
+}
+
+message PongResponse {
+    bool ok = 1;
+}
+
+message User {
+    string name = 1;
+    string username = 2;
+    bool isadmin = 3;
+}
+
+message UserRequest {
+    uint32 id = 1;
+}
+service Auth{
+    rpc Ping(PingRequest) returns (PongResponse) {};
+    rpc GetUser(UserRequest) returns (User) {};
+}
+
